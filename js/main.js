@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
                     html += '<tr id="' + res.data[i].id + '_tr"><td><button type="button" class="rfps_del" id="' + res.data[i].id + '">刪除</button></td><td>' + res.data[i].id + '</td><td>' + res.data[i].name + '</td><td>' + res.data[i].retailer_id + '</td></tr>';
                 }
                 html += '</tbody></table>';
-                var btn = '第二步驟：<button type="button" id="mxp_go_del_products_btn">刪除全部粉絲頁商品</button><br>';
+                var btn = '第二步驟：<button type="button" id="mxp_go_del_products_btn">刪除全部粉絲頁商品 (' + res.data.length + ' 筆)</button><br>';
                 $('#show_items').html(btn + html);
                 $('#mxp_go_del_products_btn').click(function() {
                     $(this).prop('disabled', true);
