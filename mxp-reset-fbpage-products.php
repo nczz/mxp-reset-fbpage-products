@@ -43,7 +43,7 @@ function mxp_ajax_get_fbpage_products() {
     }
     $catalog_id   = $_POST['data']['catalog_id'];
     $access_token = $_POST['data']['access_token'];
-    $entry_api    = 'https://graph.facebook.com/v12.0/' . $catalog_id . '/products?access_token=' . $access_token . '&limit=3000';
+    $entry_api    = 'https://graph.facebook.com/v13.0/' . $catalog_id . '/products?access_token=' . $access_token;// . '&limit=1000';
     $data         = mxp_fbapi_recursive_get($entry_api, array());
     if (empty($data) || !isset($data['data']) || count($data['data']) == 0) {
         $error = isset($data['error']) ? $data['error'] : '';
